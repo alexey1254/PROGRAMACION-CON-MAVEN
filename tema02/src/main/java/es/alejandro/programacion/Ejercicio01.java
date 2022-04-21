@@ -7,6 +7,13 @@ import java.util.Scanner;
  */
 public class Ejercicio01 {
 
+    /**
+     * 
+     * @param n1 numero a comparar
+     * @param n2 numero a comparar
+     * @param n3 numero a comparar
+     * @return El numero mayor
+     */
     public static int comprobarMayor(int n1, int n2, int n3) {
         if (n1 > n2 && n1 > n3) {
             return n1;
@@ -17,6 +24,13 @@ public class Ejercicio01 {
         }
     }
 
+    /**
+     * 
+     * @param n1 numero a comparar
+     * @param n2 numero a comparar
+     * @param n3 numero a comparar
+     * @return El menor de los numeros pasados
+     */
     public static int comprobarMenor(int n1, int n2, int n3) {
         if (n1 < n2 && n1 < n3) {
             return n1;
