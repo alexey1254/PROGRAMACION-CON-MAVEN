@@ -1,8 +1,9 @@
 package es.alejandro.programacion;
 
 /**
+ * @author Alejandro
  * Programa que reciba un número, n, y nos dé la suma de los números
- * comprendidos entre [1,n] (Aquí también está el 4)
+ * comprendidos entre [1,n] (Aquí también está el ej 4)
  */
 import java.util.Scanner;
 
@@ -10,9 +11,11 @@ public class Ejercicio03 {
 
     public static void main(String[] args) {
         Scanner sc = new java.util.Scanner(System.in);
-        int n = sc.nextInt(), i, calculo = 0, producto = 0;
+        int numero = sc.nextInt();
+        long calculo = 0;
+        long producto = 1;
         sc.close();
-        for (i = 1; i <= n; i++) {
+        for (int i = 1; i <= numero; i++) {
             calculo += i;
             producto *= i;
         }

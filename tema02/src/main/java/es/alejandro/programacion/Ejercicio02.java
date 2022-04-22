@@ -1,23 +1,45 @@
 package es.alejandro.programacion;
 
 /**
- * Programa que genere un número aleatorio entre [100,200] e imprima el número y
- * diga si es par o impar
+ * @author Alejandro
+ *         Programa que genere un número aleatorio entre [100,200] e imprima el
+ *         número y
+ *         diga si es par o impar
  */
 
 public class Ejercicio02 {
-    public static boolean esPar(int n) {
-        return n % 2 == 0;
+    /**
+     * 
+     * @param numero
+     * @return True si es par
+     */
+    private static boolean esPar(int numero) {
+        return numero % 2 == 0;
+    }
+
+    /**
+     * Genera un numero aleatorio entre minimo y maximo ambos inclusive
+     * 
+     * @param min
+     * @param max
+     * @return numero Aleatorio
+     */
+    private static long generarAleatorio(long min, long max) {
+        long resto = min + 1 - max;
+        long numAleatorio = (long) (resto * Math.random() + max);
+        return numAleatorio;
+    }
+
+    private static void imprimirResultado(int numeroAleatorioGenerado) {
+        if (esPar(numeroAleatorioGenerado)) {
+            System.out.printf("El numero %d es par", numeroAleatorioGenerado);
+        } else {
+            System.out.printf("El numero %d es impar", numeroAleatorioGenerado);
+        }
     }
 
     public static void main(String[] args) {
-        int numero = (int) (100 + Math.random() * 101);
-        System.out.println(numero);
-        if (esPar(numero)) {
-            System.out.println("Es par");
-        } else {
-            System.out.println("Es impar");
-
-        }
+        int numeroAleatorioGenerado = (int) generarAleatorio(100, 200);
+        imprimirResultado(numeroAleatorioGenerado);
     }
 }
