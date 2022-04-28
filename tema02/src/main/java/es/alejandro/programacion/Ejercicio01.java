@@ -24,6 +24,17 @@ public class Ejercicio01 {
         }
     }
 
+    public static int comprobarMayorV2(int n1, int n2, int n3) {
+        int numeros[] = { n1, n2, n3 };
+        int numeroMayor = n1;
+        for (int i = 0; i < numeros.length - 1; i++) {
+            if (numeros[i + 1] > numeros[i]) {
+                numeroMayor = numeros[i + 1];
+            }
+        }
+        return numeroMayor;
+    }
+
     /**
      * 
      * @param n1 numero a comparar
@@ -41,7 +52,20 @@ public class Ejercicio01 {
         }
     }
 
+    public static int comprobarMenorV2(int n1, int n2, int n3) {
+        int numeros[] = { n1, n2, n3 };
+        int numeroMenor = n1;
+        for (int i = 0; i < numeros.length - 1; i++) {
+            if (numeros[i + 1] < numeros[i]) {
+                numeroMenor = numeros[i + 1];
+            }
+        }
+        return numeroMenor;
+    }
+
     public static void main(String[] args) {
+        System.out.println(comprobarMayorV2(60, 50, 4));
+
         Scanner sc = new java.util.Scanner(System.in);
         int vcontrol = 1;
         System.out.println("Programa que recibe tres números y dice cuál es el menor y el mayor");
