@@ -4,12 +4,17 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class LoteriaApp {
-    private static int[] todosLosNumerosPrimitiva;
+    private static int[] todosLosNumerosPrimitiva;// esto tiene que ser otra cosa que no sea un array
 
     /**
      * Añade los numeros de la primitiva
      */
     private static void addTodosLosNumeros(Set<Integer> numeros) {
+        int i = 0;
+        for (Integer numero : numeros) {
+            todosLosNumerosPrimitiva[i] = numero;
+            i++;
+        }
 
     }
 
