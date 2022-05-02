@@ -33,7 +33,7 @@ public class Estadisticas {
      * @param numerosParaCalcular
      * @return int
      */
-    public static int calculoModa(ArrayList<Integer> numerosParaCalcular) {
+    // public static int calculoModa(ArrayList<Integer> numerosParaCalcular) {
 
-    }
+    // }
 }
