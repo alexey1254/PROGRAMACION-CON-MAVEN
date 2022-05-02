@@ -1,44 +1,46 @@
 package es.alejandro.programacion.EjerciciosClase;
 
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class LoteriaApp {
-    private static int[] todosLosNumerosPrimitiva;// esto tiene que ser otra cosa que no sea un array
+    private static ArrayList<Integer> todosLosNumerosPrimitiva = new ArrayList<>();
 
     /**
      * Añade los numeros de la primitiva
      */
     private static void addTodosLosNumeros(Set<Integer> numeros) {
-        int i = 0;
-        for (Integer numero : numeros) {
-            todosLosNumerosPrimitiva[i] = numero;
-            i++;
-        }
-
+        todosLosNumerosPrimitiva.addAll(numeros);
     }
 
     /**
      * 
      * @return
      */
-    protected static int[] getTodosLosNumerosPrimitiva() {
-        return todosLosNumerosPrimitiva;
+    protected static ArrayList<Integer> getTodosLosNumerosPrimitiva() {
+        return (ArrayList<Integer>) todosLosNumerosPrimitiva;
     }
 
     public static void main(String[] args) {
         Set<Integer> numerosPrimitiva = new TreeSet<>();
-        Loteria l = new Loteria();
-        int numeroVeces = 45;
-        todosLosNumerosPrimitiva = new int[numeroVeces];
+        Loteria numerosPremiados = new Loteria();
+        int numeroVeces = 10;
+
         // Bucle
         for (int i = 0; i <= numeroVeces; i++) {
-            l.generarNumerosPrimitiva();
-            numerosPrimitiva = l.getNumerosPrimitiva();
+            numerosPremiados.generarNumerosPrimitiva();
+            numerosPrimitiva = numerosPremiados.getNumerosPrimitiva();
             addTodosLosNumeros(numerosPrimitiva);
-            l.eliminarNumerosPrimitiva();
+            numerosPremiados.eliminarNumerosPrimitiva();
         }
-        System.out.println(todosLosNumerosPrimitiva);
+
+        // Primera salida
+        System.out.println(todosLosNumerosPrimitiva + "\n");
+
+        // Calcular las estadisticas:
+        System.out.println("La media de numeros es ->" + Estadisticas.calculoMedia(todosLosNumerosPrimitiva) + "\n");
+
         System.exit(0);
     }
 }
