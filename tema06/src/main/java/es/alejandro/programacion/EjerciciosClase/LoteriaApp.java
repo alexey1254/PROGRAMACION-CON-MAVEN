@@ -39,7 +39,7 @@ public class LoteriaApp {
         System.out.println(todosLosNumerosPrimitiva + "\n");
 
         // Calcular las estadisticas:
-        System.out.println("La media de numeros es ->" + Estadisticas.calculoMedia(todosLosNumerosPrimitiva) + "\n");
+        System.out.println("La media de numeros es -> " + Estadisticas.calculoMedia(todosLosNumerosPrimitiva) + "\n");
 
         System.exit(0);
     }
