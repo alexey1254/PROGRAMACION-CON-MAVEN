@@ -1,8 +1,9 @@
 package es.alejandro.programacion.EjerciciosClase;
 
-import es.alejandro.programacion.EjerciciosClase.Estadisticas;
-
 import org.junit.Test;
+
+import es.alejandro.programacion.EjerciciosClase.Loteria.Estadisticas;
+
 import org.junit.Assert;
 import org.junit.*;
 
