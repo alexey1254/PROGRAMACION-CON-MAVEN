@@ -1,5 +1,8 @@
-
+<<<<<<<< HEAD:tema06/src/main/java/es/alejandro/programacion/EjerciciosClase/Ejercicio01/LoteriaApp.java
 package es.alejandro.programacion.EjerciciosClase.Ejercicio01;
+========
+package es.alejandro.programacion.EjerciciosClase.Loteria;
+>>>>>>>> dfd8a4d0b45d3c9ed592159de534ed5b5f4b52fb:tema06/src/main/java/es/alejandro/programacion/EjerciciosClase/Loteria/LoteriaApp.java
 
 import java.util.ArrayList;
 import java.util.Set;
