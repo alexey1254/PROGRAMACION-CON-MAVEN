@@ -1,4 +1,4 @@
-package es.alejandro.programacion.EjerciciosClase;
+package es.alejandro.programacion.EjerciciosClase.Ejercicio01;
 
 import java.util.ArrayList;
 import java.util.Set;
