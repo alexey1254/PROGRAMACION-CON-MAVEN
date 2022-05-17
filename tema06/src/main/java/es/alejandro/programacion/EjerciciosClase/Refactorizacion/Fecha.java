@@ -2,7 +2,7 @@ package es.alejandro.programacion.EjerciciosClase.Refactorizacion;
 
 public class Fecha {
 
-    private static int diasMeses[] ={31,28,31,30,31,30,31,31,30,31,30,31};
+    private static int diasMeses[] = {31,28,31,30,31,30,31,31,30,31,30,31};
     private int dia;
     private int mes;
     private int anio;
