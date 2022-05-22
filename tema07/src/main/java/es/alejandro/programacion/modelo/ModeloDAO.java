@@ -11,7 +11,8 @@ public class ModeloDAO {
 
     }
 
-    public static int numProductos() {
+    public static int numProductos() throws Exception {
+        ResultSet consulta = Conexion.consulta("select count(nombre) from producto;");
 
     }
 
@@ -33,5 +34,12 @@ public class ModeloDAO {
 
     public static int borrarProducto(int codigo) {
 
+    }
+
+    public static void main(String[] args) throws Exception {
+        Conexion.getConexionBdFerreteria();
+
+        ResultSet consulta = Conexion.consulta("select count(nombre) from producto;");
+        System.out.println(consulta);
     }
 }
